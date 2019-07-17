@@ -12,7 +12,7 @@ class PostController extends AppController
 
         $names = ['Ivanov', 'Petrov', 'Sidorov'];
 
-        $this->debug(Yii::$app);
+
 
         return $this->render('test');
 
