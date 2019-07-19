@@ -28,7 +28,7 @@ class TestForm extends Model
 //            [ 'name', 'string', 'max' => 5, 'tooLong' => 'Слишком длинное имя' ]
             [ 'name', 'string', 'length' => [2,5] ],
             [ 'name', 'myRule' ],
-            [ 'text', 'trim' ]
+            [ 'text', 'safe' ]
         ];
     }
 
