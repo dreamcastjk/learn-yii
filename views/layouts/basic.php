@@ -18,7 +18,7 @@ AppAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <title>Document</title>
+    <title><?= $this->title; ?></title>
     <?php $this->head() ?>
 </head>
 <body>
@@ -38,6 +38,10 @@ AppAsset::register($this);
                     <?= Html::a('Статья', ['post/show']) ?>
                 </li>
             </ul>
+
+            <?php if(isset($this->blocks['block1'])): ?>
+                <?php echo $this->blocks['block1'];  ?>
+            <?php endif; ?>
 
             <?= $content ?>
 

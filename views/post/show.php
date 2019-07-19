@@ -1,3 +1,8 @@
+
+<?php $this->beginBlock('block1'); ?>
+    <h1>Заголовок страницы</h1>
+<?php $this->endBlock(); ?>
+
 <h1>Show Action</h1>
 
 <button class="btn btn-success" id="btn">Click me...</button>
@@ -17,7 +22,9 @@ $js = <<<JS
         $.ajax({
         
             url: 'index.php?r=post/index',
-            data: {test:'123'},
+            data: {
+                test:'123',
+            },
             type: 'POST',
             success: function(res) {
               console.log(res);
