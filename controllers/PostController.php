@@ -4,19 +4,12 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\TestForm;
 
 class PostController extends AppController
 {
 
     public $layout = 'basic';
-
-//    public function beforeAction($action){
-//
-//        if($action->id == 'index')
-//            $this->enableCsrfValidation = false;
-//
-//        return parent::beforeAction($action);
-//    }
 
     public function actionIndex(){
 
@@ -24,9 +17,10 @@ class PostController extends AppController
             debug(Yii::$app->request->post());
         }
 
-        $this->view->title = 'Все статьи';
+        $model = new TestForm();
 
-        return $this->render('test');
+        $this->view->title = 'Все статьи';
+        return $this->render('test', compact('model'));
     }
 
     public function actionShow(){
